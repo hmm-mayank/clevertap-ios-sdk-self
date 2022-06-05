@@ -1639,12 +1639,12 @@ static NSMutableArray<CTInAppDisplayViewController*> *pendingNotificationControl
                                                         invocationWithMethodSignature:signature];
                             [invocation setTarget:application];
                             [invocation setSelector:@selector(openURL:options:completionHandler:)];
-                            NSDictionary *options = @{};
-                            id completionHandler = nil;
-                            [invocation setArgument:&dlURL atIndex:2];
-                            [invocation setArgument:&options atIndex:3];
-                            [invocation setArgument:&completionHandler atIndex:4];
-                            [invocation invoke];
+//                             NSDictionary *options = @{};
+//                             id completionHandler = nil;
+//                             [invocation setArgument:&dlURL atIndex:2];
+//                             [invocation setArgument:&options atIndex:3];
+//                             [invocation setArgument:&completionHandler atIndex:4];
+//                             [invocation invoke];
                         } else {
                             if ([application respondsToSelector:@selector(openURL:)]) {
                                 [application performSelector:@selector(openURL:) withObject:dlURL];
